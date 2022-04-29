@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cajero Automático</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="global-container">
+
+        <header class="header">
+            <div class="container logo-nav-container">
+                <a href="index.html" id="logito"><img class="logo" src="image-removebg-preview.png">ATM CBTIS</a>
+                <nav class="navigation">
+                    <ul>
+                        <li><a href="#" id="miCuenta_id">Mi Cuenta</a></li>
+                        <li><a href="#" id="cajerito_id">ATM</a></li>
+                        <li><a href="#" id="transaccion">Transacciones</a></li>
+                        <li><a href="#" id="depositar_id">Depositar</a></li>
+                        <input type="button" class="swal2-confirm btn-class swal2-styled" value="CERRAR SESIÓN" id="reiniciar" /> 
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main class="main-central" id="central_id">
+            <table class="tabla">
+                <thead>
+                    <tr>
+                        <th><span class="text">#</span></th>
+                        <th><span class="text">Id. Transacción</span></th>
+                        <th><span class="text">Usuario</span></th>
+                        <th><span class="text">Tipo de transacción</span></th>
+                        <th><span class="text">Transacción</span></th>
+                        <th><span class="text">Balance</span></th>
+                        <th><span class="text">Fecha</span></th>
+                        <th><span class="text">Hora</span></th>
+                    </tr>
+                </thead>
+                <tbody id="transactions"></tbody>
+            </table>
+        </main>    
+        <main class="main" id="main_id">
+            <audio src="tecla.mp3" id="tecla_id"></audio>
+            <audio src="alerta.mp3" id="alerta_id"></audio>
+            <audio src="entrega.mp3" id="entrega_id"></audio>
+            <div class="cajero">
+                <p>
+                    <img src="cajerito.jpg" alt="Cajero" class="cajerito">
+                </p>
+                <p>
+                    Ingrese el monto deseado
+                </p>
+                <p>
+                    <input class="swal2-input input-class" type="number" id="cajitatexto" />
+                    <br>
+                    <input class="swal2-confirm btn-class swal2-styled" type="button" value="Sacar Dinero" id="extraer" />
+                </p>
+            </div>
+            <div class="resultado">
+            <p class="con-padding"id="resultado"></p>
+            </div>
+        </main>
+        <footer id="footer_id" class="footer">
+            <div>
+                <p>Copyright © 2021 Banco CBTIS.</p>
+            </div>
+        </footer>    
+    </div>    
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="js/billetes.js"></script>
+    <script src="js/funciones.js"></script>
+    <script src="js/scripts.js"></script>
+</body>
+</html>
